@@ -21,7 +21,6 @@ function validate(e) {
                     if (texto.length <= 2) {
                         divContainer.setAttribute('data-error-visible', 'true');
                         errors[element.name] += ' Error input ' + element.name
-                        element.value = ''
                     } else {
                         divContainer.removeAttribute('data-error-visible', 'true');
                         delete errors[element.name]
@@ -31,10 +30,8 @@ function validate(e) {
 
             case 'email':
                 if (!element.value.match(emailRegex)) {
-
                     divContainer.setAttribute('data-error-visible', 'true');
                     errors[element.name] += ' Error input ' + element.name
-                    element.value = ''
                 } else {
                     divContainer.removeAttribute('data-error-visible', 'true');
                     delete errors[element.name]
@@ -46,7 +43,6 @@ function validate(e) {
                 if (dateSelect == 'Invalid Date' || dateSelect.toISOString().split("T")[0] > todayDate) {
                     divContainer.setAttribute('data-error-visible', 'true');
                     errors[element.name] += ' Error input ' + element.name
-                    element.value = ''
                 } else {
                     divContainer.removeAttribute('data-error-visible', 'true');
                     delete errors[element.name]
@@ -58,7 +54,6 @@ function validate(e) {
                 if (isNaN(numValue) || numValue <= 0 || numValue >= 20) {
                     divContainer.setAttribute('data-error-visible', 'true');
                     errors[element.name] += ' Error input ' + element.name
-                    element.value = ''
                 } else {
                     divContainer.removeAttribute('data-error');
                     delete errors[element.name]
@@ -87,7 +82,6 @@ function validate(e) {
                     if (!element.checked) {
                         errorCheck.setAttribute('data-error-visible', 'true');
                         errors[element.name] += ' Error input ' + element.name
-                        element.value = ''
                     } else {
                         errorCheck.removeAttribute('data-error-visible', 'true');
                         delete errors[element.name]
