@@ -99,6 +99,7 @@ function validate(e) {
     if (Object.keys(errors).length > 0) {
         console.log('erreurs de validation: ', errors);
     } else {
+        //if the form is valid the form is gonna reset and shwo the modal Merci
         bookForm.style.display = 'none';
         finalModal.style.display = 'flex';
         bookForm.reset()
