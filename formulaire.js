@@ -30,6 +30,7 @@ function validate(e) {
 
             case 'email':
                 if (!element.value.match(emailRegex)) {
+
                     divContainer.setAttribute('data-error-visible', 'true');
                     errors[element.name] += ' Error input ' + element.name
                 } else {
@@ -100,5 +101,7 @@ function validate(e) {
     } else {
         bookForm.style.display = 'none';
         finalModal.style.display = 'flex';
+        bookForm.reset()
+
     }
 }
