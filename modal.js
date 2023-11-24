@@ -9,6 +9,8 @@ const x = document.getElementById("myTopnav");
 // launch modal event
 openModal.forEach((btn) => btn.addEventListener("click", launchModal));
 closeMainModal.forEach((cloBtn) => cloBtn.addEventListener("click", closeModal));
+
+// Close final modal with button merci, change the style of the modal 
 closeMercieModal.onclick = function () {
   closeModal()
   finalModal.style.display = "none"
