@@ -1,17 +1,19 @@
 // DOM Elements
 const modalbg = document.querySelector(".bground");
-const modalBtn = document.querySelectorAll(".modal-btn");
-const formData = document.querySelectorAll(".formData");
-const closeBtn = document.querySelectorAll(".close")
-const closeBtnModal = document.getElementById("button-close")
+const openModal = document.querySelectorAll(".modal-btn");
+const closeMainModal = document.querySelectorAll(".close")
+const closeMercieModal = document.getElementById("button-close")
 const x = document.getElementById("myTopnav");
 
 
 // launch modal event
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-closeBtn.forEach((cloBtn) => cloBtn.addEventListener("click", closeModal));
-closeBtnModal.onclick = function () {
+openModal.forEach((btn) => btn.addEventListener("click", launchModal));
+closeMainModal.forEach((cloBtn) => cloBtn.addEventListener("click", closeModal));
+closeMercieModal.onclick = function () {
   closeModal()
+  finalModal.style.display = "none"
+  bookForm.style.display = "block";
+
 }
 
 // launch modal form
@@ -31,4 +33,3 @@ function closeModal() {
   x.classList.remove("movil")
 
 }
-
